@@ -21,7 +21,7 @@
                     <th>Name</th>
                     <th>Author</th>
                     <th>ISBN</th>
-                    <th colspan="2">Actions     <a href="/p/add"><span class="glyphicon glyphicon-plus"></span>Add</a></th>
+                    <th>Actions <a class="btn btn-success" href="/p/add"><span class="glyphicon glyphicon-plus"></span>Add</a></th>
                 </tr>
             </thead>
             <tbody>
@@ -30,8 +30,8 @@
                     <td th:text="${book.name}"></td>
                     <td th:text="${book.author}"></td>
                     <td th:text="${book.isbn}"></td>
-                    <td><a th:href="@{/p/edit/{id}(id=${book.id})}"><span class="glyphicon glyphicon-pencil"></span> Edit</a></td>
-                    <td><a th:href="@{/p/delete/{id}(id=${book.id})}"><span class="glyphicon glyphicon-trash"></span> Delete</a></td>
+                    <td><a class="btn btn-primary" th:href="@{/p/edit/{id}(id=${book.id})}"><span class="glyphicon glyphicon-pencil"></span> Edit</a>
+                    <a class="btn btn-danger" th:href="@{/p/delete/{id}(id=${book.id})}"><span class="glyphicon glyphicon-trash"></span> Delete</a></td>
                 </tr>
             </tbody>
         </table>
