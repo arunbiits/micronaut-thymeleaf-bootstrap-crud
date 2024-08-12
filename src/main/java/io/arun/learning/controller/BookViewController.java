@@ -10,13 +10,13 @@ import jakarta.inject.Inject;
 import java.util.Collections;
 import java.util.Map;
 
-@Controller("/p")
+@Controller
 public class BookViewController {
 
     @Inject
     private BookService bookService;
 
-    @Get("/list")
+    @Get(uris =  {"/", "/books"})
     @View("list.html")
     public Map<String, Object> listBooks() {
         return Collections.singletonMap("books", bookService.findAll());
